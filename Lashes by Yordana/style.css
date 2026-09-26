@@ -1,0 +1,1759 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background: #1b1512;
+    color: #f0eae6;
+}
+
+/* HERO – С АНИМАЦИЯ */
+.hero-lashes {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('67.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    animation: slowZoom 20s infinite alternate;
+}
+
+@keyframes slowZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(27,21,18,0.9) 0%, rgba(27,21,18,0.6) 50%, rgba(27,21,18,0.3) 100%);
+    z-index: 2;
+}
+
+.hero-front {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    max-width: 700px;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-mini-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #d7a990;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.text-row {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    animation: fadeInUp 1s ease backwards;
+}
+
+.text-row:nth-child(1) { animation-delay: 0.2s; }
+.text-row:nth-child(2) { animation-delay: 0.4s; }
+.text-row:nth-child(3) { animation-delay: 0.6s; }
+
+.text-row.accent {
+    color: #d7a990;
+    font-size: 5.5rem;
+    margin: 5px 0;
+}
+
+.hero-desc {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    max-width: 500px;
+    animation: fadeInUp 1s ease 0.8s backwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======================
+   КАРУСЕЛ – ГАРАНТИРАН
+   ====================== */
+.content {
+    background: #8a7266;
+    padding: 100px 0 150px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.content-header h2 {
+    font-size: 3rem;
+    color: #ebd5c8;
+    text-align: center;
+}
+
+.content-header h2 span {
+    color: #d7a990;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0 40px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    padding: 0 40px;
+    width: max-content;
+}
+
+.carousel-item {
+    width: 280px;
+    flex-shrink: 0;
+    border-radius: 60px 20px 60px 20px;
+    overflow: hidden;
+    border: 1px solid #755e51;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 280px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+}
+
+/* ТВОИТЕ 9 СНИМКИ – С !important */
+.img1 { background-image: url('13.heic') !important; }
+.img2 { background-image: url('1.heic') !important; }
+.img3 { background-image: url('11.heic') !important; }
+.img4 { background-image: url('12.heic') !important; }
+.img5 { background-image: url('5.heic') !important; }
+.img6 { background-image: url('9.heic') !important; }
+.img7 { background-image: url('2.heic') !important; }
+.img8 { background-image: url('3.heic') !important; }
+.img9 { background-image: url('14.heic') !important; }
+
+.carousel-label {
+    padding: 18px 15px;
+    background: #2b201c;
+    border-top: 1px solid #7a6053;
+}
+
+.carousel-label span {
+    font-size: 1.3rem;
+    color: #efd9cd;
+}
+.carousel-label i {
+    color: #cda992;
+    font-size: 1.6rem;
+}
+
+.carousel-item:hover .carousel-label i {
+    transform: rotate(5deg) scale(1.1);
+    color: #ecc7b5;
+}
+
+/* ГАРАНЦИЯ – ПОКАЖИ СНИМКИТЕ */
+.img1 { background-image: url('13.heic') !important; }
+.img2 { background-image: url('1.heic') !important; }
+.img3 { background-image: url('11.heic') !important; }
+.img4 { background-image: url('12.heic') !important; }
+.img5 { background-image: url('5.heic') !important; }
+.img6 { background-image: url('9.heic') !important; }
+.img7 { background-image: url('2.heic') !important; }
+.img8 { background-image: url('3.heic') !important; }
+.img9 { background-image: url('14.heic') !important; }
+
+.carousel-img {
+    background-size: cover !important;
+    background-position: center !important;
+    display: block !important;
+    width: 100%;
+    height: 280px;
+}
+
+.collection-quote {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-left: 4px solid #ae8b79;
+    padding: 30px 20px;
+    max-width: 800px;
+    margin: 40px auto 10px;
+    background: #2f221e70;
+    border-radius: 100px 20px 100px 20px;
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #8a7266;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(200, 160, 140, 0.2);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(138, 114, 102, 0.6);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.nav-logo a {
+    font-family: 'Playfair Display', serif;
+    
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #f0eae6;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-logo a span {
+  font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #d7a990;
+    font-weight: 400;
+}
+
+.nav-logo a:hover {
+    color: #e9d5c8;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #f0eae6;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #d7a990;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e9d5c8;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #d7a990;
+    font-weight: 400;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: #f0eae6;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.6rem 1.8rem;
+    border: 1.5px solid #d7a990;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-nav:hover {
+    background: #d7a990;
+    color: #1b1512;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(215, 169, 144, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #f0eae6;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.mobile-menu:hover {
+    color: #d7a990;
+}
+
+/* Adjust hero section to account for fixed navbar */
+.heroEffects {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Add padding to the first section after navbar */
+.content {
+    margin-top: 0;
+}
+
+/* ======================
+   RESPONSIVE NAVBAR
+   ====================== */
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(27, 21, 18, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .btn-nav {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* ======================
+   ЛОГО - ПОСЛЕДНА НАДЕЖДА
+   ====================== */
+.navbar .nav-container .nav-logo a {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.2rem !important;
+    color: #f0eae6 !important;
+}
+
+    .nav-container {
+        padding: 0.6rem 1rem;
+    }
+}
+/* ======================
+   PRICE SECTION with REFILLS
+   ====================== */
+.price-section {
+    padding: 80px 0;
+    background: #241e1b;
+}
+.section-title {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: #f0eae6 !important;  /* Много светъл */
+    margin-bottom: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    
+}
+
+.section-title span {
+    color: #d7a990 !important;  /* Акцент */
+}
+
+.section-sub {
+    text-align: center;
+    color: #e0cec4 !important;  /* Светъл */
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+}
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.price-card {
+    background: #2d231f;
+    padding: 35px 25px;
+    border-radius: 30px 15px 30px 15px;
+    border: 1px solid #5e4a40;
+    position: relative;
+    transition: 0.3s;
+    text-align: center;
+
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+    border-color: #d7a990;
+}
+
+.price-card.featured {
+    border: 2px solid #d7a990;
+}
+
+.price-card h3 {
+    font-size: 2rem;
+    color: #efd9cd;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    color: #d7a990;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.price-features {
+    list-style: none;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.price-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #e0cec4;
+
+}
+
+.price-features i {
+    color: #d7a990;
+    width: 20px;
+
+}
+
+
+.about-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    border: 1.5px solid #d7a990;
+    color: #efd9cd;
+    padding: 12px 35px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.about-btn:hover {
+    background: #d7a990;
+    color: #1b1512;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(215, 169, 144, 0.5);
+}
+.price-btn:hover {
+    background: #d7a990;
+    color: #1b1512;
+}
+
+.price-badge {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: #d7a990;
+    color: #1b1512;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.price-badge {
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    background: #d7a990;
+    color: #1b1512;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
+}
+.price-addons {
+    background: #2d231f;
+    border-radius: 40px 15px 40px 15px;
+    padding: 40px;
+    border: 2px solid #5e4a40;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.price-card {
+    padding: 25px 15px;
+}
+
+.price-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.price-value {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.price-features {
+    margin-bottom: 20px;
+}
+
+.price-features li {
+    font-size: 1.0rem;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.price-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.price-badge {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+}
+.addons-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #efd9cd;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.addon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #241e1b;
+    border-radius: 30px;
+    border: 1px solid #5e4a40;
+}
+
+.addon-item span:first-child {
+    color: #e0cec4;
+}
+
+.addon-price {
+    color: #d7a990;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.addon-item:last-child {
+    grid-column: span 2;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.info-bubble {
+    background: rgba(215, 169, 144, 0.15);
+    border: 1px solid #d7a990;
+    border-radius: 60px 20px 60px 20px;
+    padding: 18px 30px;
+    margin: 40px auto 0;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    
+    /* СИЛНО СВЕТЕНЕ */
+    box-shadow: 
+        0 0 30px rgba(215, 169, 144, 0.6),
+        inset 0 0 20px rgba(215, 169, 144, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 30px rgba(215, 169, 144, 0.6), inset 0 0 20px rgba(215, 169, 144, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(215, 169, 144, 0.9), inset 0 0 30px rgba(215, 169, 144, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(215, 169, 144, 0.6), inset 0 0 20px rgba(215, 169, 144, 0.3);
+    }
+}
+/* ======================
+   ABOUT SECTION
+   ====================== */
+.about-section {
+    padding: 80px 0;
+    background: #1f1815;
+}
+
+/* ======================
+   ABOUT SECTION - ВЕРТИКАЛНА (ТОЧНО КАКТО БЕШЕ)
+   ====================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image {
+    background-image: url('8.jpg');
+    border-radius: 60px 20px 60px 20px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #5e4a40;
+    width: 320px;  /* Точно ширина като преди */
+    height: 450px;  /* По-висока от ширината - вертикална */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+background-position: center 60%;  /* Това мести снимката */
+    background-repeat: no-repeat;}
+
+.image-placeholder i {
+    font-size: 5rem;  /* Точно както беше */
+    color: #d7a990;
+    margin-bottom: 15px;
+}
+.about-image {
+    box-shadow: 0 0 30px rgba(215, 169, 144, 0.5);
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+}
+
+.about-image:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 
+        0 0 45px rgba(215, 169, 144, 0.9),
+        0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: #d7a990;
+}
+.image-placeholder p {
+    color: #efd9cd;
+    font-size: 1.5rem;  /* Точно както беше */
+    
+}
+/* ======================
+   ABOUT SECTION - ШРИФТОВЕ
+   ====================== */
+.about-content h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: #ebd5c8;
+    margin-bottom: 5px;
+}
+
+.about-content h2 span {
+    font-family: 'Great Vibes', cursive;
+    color: #d7a990;
+}
+
+.about-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #cbb2a6;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.9;
+    color: #d4c0b6;
+    margin-bottom: 20px;
+}
+
+.about-content .stat-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.about-content .stat-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+
+
+.stat-number {
+    font-size: 2rem;
+    color: #d7a990;
+    font-weight: 600;
+    display: block;
+}
+
+.stat-label {
+    color: #b9a094;
+    font-size: 0.9rem;
+}
+
+/* ======================
+   ABOUT СЕКЦИЯ - ПОСТОЯННО СВЕТЕНЕ
+   ====================== */
+.about-section {
+    padding: 60px 0;
+    background: #1f1815;
+    position: relative;
+    animation: sectionGlow 3s ease-in-out infinite;
+}
+
+@keyframes sectionGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(215, 169, 144, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(215, 169, 144, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(215, 169, 144, 0.2);
+    }
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px dashed rgba(215, 169, 144, 0.3);
+    border-radius: 100px 30px 100px 30px;
+    animation: borderGlow 3s ease-in-out infinite;
+    pointer-events: auto;
+}
+
+@keyframes borderGlow {
+    0% {
+        border-color: rgba(215, 169, 144, 0.2);
+        box-shadow: inset 0 0 20px rgba(215, 169, 144, 0.1);
+    }
+    50% {
+        border-color: rgba(215, 169, 144, 0.6);
+        box-shadow: inset 0 0 40px rgba(215, 169, 144, 0.3);
+    }
+    100% {
+        border-color: rgba(215, 169, 144, 0.2);
+        box-shadow: inset 0 0 20px rgba(215, 169, 144, 0.1);
+    }
+}
+/* ======================
+   FAQ SECTION
+   ====================== */
+.faq-section {
+    padding: 80px 0;
+    background: #241e1b;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #2d231f;
+    border: 1px solid #5e4a40;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    color: #efd9cd;
+    font-size: 1.3rem;
+}
+
+.faq-question i {
+    color: #d7a990;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+    color: #cbb2a6;
+     font-size: 1.2rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 20px 20px;
+}
+
+.map-section {
+    padding: 60px 0;
+    background: color: #cfb6a9;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.map-box {
+    background: #2d231f;
+    border-radius: 60px 20px 60px 20px;
+    padding: 20px;
+    border: 2px solid #d7a990;
+    margin-top: 30px;
+}
+
+.map-box iframe {
+    border-radius: 40px 15px 40px 15px;
+    display: block;
+}
+
+.map-address {
+    text-align: center;
+    margin-top: 20px;
+    color: #f0eae6;
+    font-size: 1.1rem;
+}
+
+.map-address i {
+    color: #d7a990;
+    margin-right: 10px;
+}
+/* ======================
+   FOOTER - КОНТАКТИ
+   ====================== */
+.footer {
+
+    background: #1b1512;
+    padding: 50px 0 30px;
+    border-top: 2px solid #d7a990;
+    text-align: center;
+    margin-bottom: -150px;
+
+}
+
+.footer-logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: #ebd5c8;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    
+}
+
+.footer-logo span {
+    color: #d7a990;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.footer-contact {
+   font-family: 'Playfair Display', serif !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e0cec4;
+    font-size: 1rem;
+}
+
+.contact-item i {
+    color: #d7a990;
+    width: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-item a {
+    color: #e0cec4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #d7a990;
+}
+
+.contact-item span {
+    color: #e0cec4;
+}
+
+.footer-credit {
+    border-top: 1px solid #5e4a40;
+    padding-top: 25px;
+}
+
+.footer-credit p {
+    color: #9a8276;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+     font-size: 1.0rem;
+}
+
+.credit-small {
+    font-size: 1.0rem !important;
+    color: #5e4a40 !important;
+     
+
+}
+
+.credit-small a {
+    color: #d7a990;
+    text-decoration: none;
+    font-weight: 400;
+     font-size: 1.0rem;
+}
+
+.credit-small a:hover {
+    text-decoration: underline;
+}
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+@media (max-width: 768px) {
+    .footer-contact {
+        align-items: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-stats {
+        justify-content: center;
+    }
+    
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ======================
+   БУТОН ЗА ГОРЕ
+   ====================== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #d7a990;
+    border: none;
+    color: #1b1512;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top-btn:hover {
+    background: #efd9cd;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(215, 169, 144, 0.5);
+}
+
+.scroll-top-btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px !important; /* Намали размера, за да се събере на един ред */
+        text-align: center;
+        line-height: 1.2;
+    }
+}
+.hero-section { 
+    background-image: url('67.jpg');
+    background-position: center; /* Центрира очите в средата на екрана */
+    background-size: cover;      /* Разпъва снимката, за да запълни целия екран */
+    background-attachment: scroll; /* Важно за айфони - фиксираният фон често се чупи при тях */
+    height: 100vh;               /* Прави секцията висока точно колкото екрана на телефона */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================
+   МОБИЛНА ВЕРСИЯ - ОПТИМИЗИРАНА
+   ====================== */
+
+/* Основни настройки за мобилни устройства */
+@media screen and (max-width: 768px) {
+    
+    /* ---------------------- */
+    /* GENERAL FIXES          */
+    /* ---------------------- */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    /* ---------------------- */
+    /* NAVBAR - МОБИЛНО МЕНЮ   */
+    /* ---------------------- */
+    .navbar {
+        padding: 5px 0;
+    }
+    
+    .nav-container {
+        padding: 0.5rem 15px;
+    }
+    
+    .nav-logo a {
+        font-size: 1.6rem !important;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #1b1512;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        gap: 25px;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-link {
+        font-size: 1.3rem !important;
+    }
+    
+    .nav-buttons {
+        gap: 10px;
+    }
+    
+    .btn-nav {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .mobile-menu {
+        display: block !important;
+    }
+    
+    @media screen and (max-width: 768px) {
+    
+    /* ---------------------- */
+    /* САМО HERO СЕКЦИЯ - БЕЗ ЧЕРНА КУТИЯ */
+    /* ---------------------- */
+    .hero-lashes,
+    .hero-new,
+    .hero-final {
+        height: 90vh;
+        min-height: 600px;
+    }
+    
+    /* Преместване на фона, за да се вижда дясната част (окото) */
+    .hero-bg .bg-image {
+    background-position: 95% 50% !important;  /* Първо върни център */
+    transform: scale(1.1) translateY(10%) !important;  /* translateY мести надолу */
+}
+    
+    /* Текстът в ляво - само преливка, без черен фон */
+    .hero-front {
+        padding-left: 5% !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important; /* Това вдига текста нагоре */
+        padding-top: 30%; /*
+    }
+    
+    .hero-content {
+        text-align: left !important;
+        max-width: 70%;
+        /* МАХАМ ЧЕРНИЯ ФОН - ОСТАВЯМ САМО ПРЕЛИВКА */
+        .hero content{
+            text-align: left !important;
+        max-width: 70%;
+        background: none;
+        padding: 10px 0;
+        border-radius: 0;}
+    
+    
+    .text-row {
+        font-size: 2.2rem !important;
+        text-align: left;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Само сянка за четимост */
+    }
+    
+    .text-row.accent {
+        font-size: 2.6rem !important;
+    }
+    
+    .hero-mini-title {
+        text-align: left;
+        font-size: 1.0rem;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .hero-desc {
+        text-align: left;
+        font-size: 1.0rem;
+        margin-left: 0;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+}
+    
+    /* ---------------------- */
+    /* CAROUSEL               */
+    /* ---------------------- */
+    .content {
+        padding: 50px 0 80px;
+    }
+    
+    .content-header h2 {
+        font-size: 2rem;
+        padding: 0 15px;
+    }
+    
+    .carousel-container {
+        padding: 15px 0 30px;
+    }
+    
+    .carousel-track {
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .carousel-item {
+        width: 220px;
+    }
+    
+    .carousel-img {
+        height: 220px;
+    }
+    
+    .carousel-label span {
+        font-size: 1rem;
+    }
+    
+    /* ---------------------- */
+    /* PRICE SECTION          */
+    /* ---------------------- */
+    .price-section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-sub {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    
+    .price-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .price-card {
+        padding: 20px 15px;
+        max-width: 350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .price-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .price-value {
+        font-size: 2rem;
+    }
+    
+    .price-features li {
+        font-size: 0.9rem;
+    }
+    
+    .price-badge {
+        font-size: 0.6rem;
+        padding: 3px 8px;
+        top: -5px;
+        right: 10px;
+    }
+    
+    /* ---------------------- */
+    /* ADDONS & INFO BUBBLE   */
+    /* ---------------------- */
+    .price-addons {
+        padding: 25px 15px;
+        margin: 30px 15px 0;
+        width: auto;
+    }
+    
+    .addons-title {
+        font-size: 1.5rem;
+    }
+    
+    .addons-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+    
+    .addon-item {
+        padding: 12px 15px;
+    }
+    
+    .addon-item:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+    
+    .info-bubble {
+        padding: 15px 20px;
+        margin: 30px 15px 0;
+        width: auto;
+    }
+    
+    .info-bubble p {
+        font-size: 0.85rem;
+    }
+    
+    .info-bubble i {
+        font-size: 1.5rem;
+    }
+    
+    /* ---------------------- */
+    /* ABOUT SECTION          */
+    /* ---------------------- */
+    .about-section {
+        padding: 50px 0;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+    
+    .about-image {
+        width: 280px !important;
+        height: 350px !important;
+        margin: 0 auto;
+    }
+    
+    .about-content {
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .about-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .about-content p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .about-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    
+    /* ---------------------- */
+    /* FAQ SECTION            */
+    /* ---------------------- */
+    .faq-section {
+        padding: 50px 0;
+    }
+    
+    .faq-grid {
+        padding: 0 15px;
+    }
+    
+    .faq-question {
+        padding: 15px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+        padding-right: 25px;
+    }
+    
+    .faq-answer p {
+        font-size: 0.9rem;
+    }
+    
+    /* ---------------------- */
+    /* MAP SECTION            */
+    /* ---------------------- */
+    .map-section {
+        padding: 50px 0;
+    }
+    
+    .map-box {
+        padding: 15px;
+        margin: 20px 15px 0;
+    }
+    
+    .map-box iframe {
+        height: 300px;
+    }
+    
+    .map-address {
+        font-size: 0.95rem;
+    }
+    
+    /* ---------------------- */
+    /* FOOTER                 */
+    /* ---------------------- */
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-logo {
+        font-size: 1.8rem;
+    }
+    
+    .footer-contact {
+        gap: 10px;
+        padding: 0 15px;
+    }
+    
+    .contact-item {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .contact-item i {
+        font-size: 1rem;
+    }
+    
+    .footer-credit p {
+        font-size: 0.8rem;
+        padding: 0 15px;
+    }
+    
+    .credit-small {
+        font-size: 0.7rem !important;
+    }
+    
+    /* ---------------------- */
+    /* FLOATING BUTTONS       */
+    /* ---------------------- */
+    .lang-circle {
+        bottom: 90px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+    
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .lang-tooltip {
+        font-size: 0.65rem;
+    }
+}
+
+/* Допълнителни корекции за много малки телефони */
+@media screen and (max-width: 480px) {
+    
+    /* Hero текст */
+    .text-row {
+        font-size: 2rem !important;
+    }
+    
+    .text-row.accent {
+        font-size: 2.3rem !important;
+    }
+    
+    .hero-desc {
+        font-size: 0.85rem;
+    }
+    
+    /* Price cards */
+    .price-card {
+        max-width: 300px;
+    }
+    
+    .price-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .price-value {
+        font-size: 1.8rem;
+    }
+    
+    /* About image */
+    .about-image {
+        width: 240px !important;
+        height: 300px !important;
+    }
+    
+    /* Navigation */
+    .nav-logo a {
+        font-size: 1.4rem !important;
+    }
+    
+    .btn-nav {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    /* FAQ */
+    .faq-question h3 {
+        font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Корекции за таблети */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .hero-front {
+        padding-left: 5%;
+    }
+    
+    .text-row {
+        font-size: 3.5rem !important;
+    }
+    
+    .text-row.accent {
+        font-size: 4rem !important;
+    }
+    
+    .about-image {
+        width: 280px !important;
+        height: 380px !important;
+    }
+}
+
+/* ======================
+   КАРУСЕЛ - РАЗЛИЧНО ЗА ТЕЛЕФОН И КОМПЮТЪР
+   ====================== */
+
+/* За компютър (мишка) - запазваме ефекта */
+@media screen and (min-width: 769px) {
+    .carousel-container {
+        cursor: grab;
+        overflow: hidden;
+    }
+    
+    .carousel-track {
+        
+        transition: transform 0.03s ease-out;
+    }
+}
+
+/* За телефон (без мишка) - обикновен скрол */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        cursor: default;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Плавно скролване на iOS */
+        scroll-snap-type: x mandatory; /* Подравняване към снимките */
+    }
+    
+    .carousel-track {
+        pointer-events: auto;
+        display: flex;
+        gap: 15px;
+        padding: 0 15px;
+        width: max-content;
+        transform: auto; /* Маха JavaScript ефекта */
+    }
+    
+    .carousel-item {
+        scroll-snap-align: start; /* Всяка снимка да спира точно */
+        width: 240px; /* Малко по-малки на телефон */
+    }
+    
+    .carousel-img {
+        height: 240px;
+    }
+    
+    /* Скриваме скрол лентата (но скролът работи) */
+    .carousel-container::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .carousel-container {
+        -ms-overflow-style: none;  /* IE и Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+}
+
+/* За много малки телефони */
+@media screen and (max-width: 480px) {
+    .carousel-item {
+        width: 200px;
+    }
+    
+    .carousel-img {
+        height: 200px;
+    }
+}
+.carousel-img {
+    background-size: cover !important;
+    background-position: center !important;
+    display: block !important;
+}
+
+/* ЗА КОМПЮТЪР – МИШКА */
+@media screen and (min-width: 769px) {
+    .carousel-container {
+        overflow: hidden;
+        cursor: grab;
+    }
+    
+    .carousel-track {
+        display: flex;
+        gap: 30px;
+        padding: 0 40px;
+        width: max-content;
+        transition: transform 0.03s ease-out;
+    }
+    
+    .carousel-img {
+        height: 280px;
+        width: 280px;
+    }
+}
+
+/* ЗА ТЕЛЕФОН – СКРОЛ */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        cursor: default;
+    }
+    
+    .carousel-track {
+        transform: none !important;
+        padding: 0 15px;
+        gap: 15px;
+    }
+    
+    .carousel-item {
+        width: 220px;
+    }
+    
+    .carousel-img {
+        height: 220px;
+    }
+}

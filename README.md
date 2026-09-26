@@ -10,6 +10,6 @@ Lashes by Yordana
 - Настроен собствен домейн и DNS управление (`lashesbyyordana.com`)
 
 Технологии
-- HTML5 & CSS3
+- HTML5 & CSS3 & JavaScript
 - Git & GitHub
 - Netlify
